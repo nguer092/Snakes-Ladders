@@ -38,9 +38,11 @@ int main(int argc, const char * argv[]) {
             if ([usersRoll isEqualToString:@"roll"]) {
                 
                 [playerOne roll];
+                
+                }
+            if (playerOne.gameOver == YES){
+                break;
             }
-            
-            
         }
     }
     return 0;

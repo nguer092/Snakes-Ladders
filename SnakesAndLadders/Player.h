@@ -13,8 +13,13 @@
 
 //The Player class needs at least 2 things. An NSInteger property called something like currentSquare and a roll method.
 
-@property (nonatomic, assign) NSUInteger currentSquare;
+@property (nonatomic, assign) NSInteger currentSquare;
+@property (nonatomic, copy) NSDictionary * gameLogic;
+@property (nonatomic, copy) NSString * output;
+@property (nonatomic) BOOL gameOver;
 
 -(void)roll;
+
+
 
 @end
