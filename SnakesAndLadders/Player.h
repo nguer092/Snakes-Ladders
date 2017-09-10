@@ -15,11 +15,9 @@
 
 @property (nonatomic, assign) NSInteger currentSquare;
 @property (nonatomic, copy) NSDictionary * gameLogic;
-@property (nonatomic, copy) NSString * output;
 @property (nonatomic) BOOL gameOver;
+@property (nonatomic, assign) NSString *name;
 
 -(void)roll;
-
-
 
 @end

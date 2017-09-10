@@ -8,37 +8,44 @@
 
 #import <Foundation/Foundation.h>
 #import "Player.h"
+#import "PlayerManager.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-//        Outside the while loop let's welcome the user and give them some simple instructions. For now just tell them to type "roll" or "r".
-        
-        NSLog(@"Welcome to Snakes & Ladders. The virtual board game experience. Ready Player One.");
-        NSLog(@"Type in the command 'roll' to roll your dice.");
-        
-//        We only need to create 1 player. So we should do this outside the while loop in main.m
+        NSLog(@"Welcome to Snakes & Ladders. The virtual board game experience.");
+        BOOL gameON = YES;
+    
+//        PlayerManager *playerManager = [[PlayerManager alloc] init];
         
         Player *playerOne = [[Player alloc] init];
-
         
-//        Create a while loop inside main.m to keep the game going.
-        
-        BOOL gameON = YES;
+    //        Create a while loop inside main.m to keep the game going.
         while (gameON){
-          
-            //        Using fgets parse the user's input
+            
+            
+//            NSLog(@"How many players do you wish to enter into the game?");
+//
+//            char userPlayers [255];
+//            fgets(userPlayers, 255, stdin);
+//            NSString *usersPlayers = [NSString stringWithCString:userPlayers encoding:NSUTF8StringEncoding];
+//            usersPlayers = [usersPlayers stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            
+//            if ([usersPlayers intValue]) {
+//                NSLog(@"Please enter a number amount of players.");
+//            } else {
+//                [playerManager createPlayers:([usersPlayers intValue])];
+//            }
+            
+            NSLog(@"Type in the command 'roll' to roll your dice.");
             
             char userRoll [255];
             fgets(userRoll, 255, stdin);
             NSString *usersRoll = [NSString stringWithCString:userRoll encoding:NSUTF8StringEncoding];
             usersRoll = [usersRoll stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-//            int rollInput = [usersRoll intValue];
             
-            if ([usersRoll isEqualToString:@"roll"]) {
-                
+            if ([usersRoll isEqualToString:@"roll"]){
                 [playerOne roll];
-                
                 }
             if (playerOne.gameOver == YES){
                 break;

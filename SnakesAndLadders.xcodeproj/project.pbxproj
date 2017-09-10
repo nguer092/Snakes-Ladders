@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		019092BB1F645A4800A79D24 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 019092BA1F645A4800A79D24 /* main.m */; };
 		019092C31F645C4C00A79D24 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 019092C21F645C4C00A79D24 /* Player.m */; };
+		01B87D551F64AE2B00B73466 /* PlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B87D541F64AE2B00B73466 /* PlayerManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		019092BA1F645A4800A79D24 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		019092C11F645C4C00A79D24 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		019092C21F645C4C00A79D24 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		01B87D531F64AE2B00B73466 /* PlayerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerManager.h; sourceTree = "<group>"; };
+		01B87D541F64AE2B00B73466 /* PlayerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				019092BA1F645A4800A79D24 /* main.m */,
 				019092C11F645C4C00A79D24 /* Player.h */,
 				019092C21F645C4C00A79D24 /* Player.m */,
+				01B87D531F64AE2B00B73466 /* PlayerManager.h */,
+				01B87D541F64AE2B00B73466 /* PlayerManager.m */,
 			);
 			path = SnakesAndLadders;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 			files = (
 				019092C31F645C4C00A79D24 /* Player.m in Sources */,
 				019092BB1F645A4800A79D24 /* main.m in Sources */,
+				01B87D551F64AE2B00B73466 /* PlayerManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +260,7 @@
 				019092C01F645A4800A79D24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

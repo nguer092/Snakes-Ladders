@@ -33,7 +33,7 @@
     int diceValue = arc4random_uniform(6)+1;
     NSLog(@"You have rolled a %d", diceValue);
     self.currentSquare += diceValue;
-    NSLog(@"Current square is %lu", (unsigned long)self.currentSquare);
+    NSLog(@"New square is %lu", (unsigned long)self.currentSquare);
     
     //    Current square must bs NSNubmer (an object) to be compared by isEqualTo
 
@@ -41,10 +41,17 @@
     NSNumber *currentSquareNum = @(self.currentSquare);
     
     if (destination != nil) {
+        if(currentSquareNum < destination){
         currentSquareNum = destination;
-        NSLog(@"Your new square is %@", currentSquareNum);
+        NSLog(@"Stairway to heaven! Your have jumped to square %@", currentSquareNum);
         NSInteger convertedNewSquare = [currentSquareNum intValue];
         self.currentSquare = convertedNewSquare;
+        } else {
+            currentSquareNum = destination;
+            NSLog(@"You got piped and have fallen to square %@", currentSquareNum);
+            NSInteger convertedNewSquare = [currentSquareNum intValue];
+            self.currentSquare = convertedNewSquare;
+        }
     }
     
     NSNumber *winningScore = @100;
